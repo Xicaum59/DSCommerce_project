@@ -8,6 +8,6 @@ import com.xicaum59.dscommerce.entities.Product;
 
 public interface ProductRepository extends JpaRepository<Product, Long> {
 
-	Optional<Product> findById(long id);
+	Optional<Product> findById(Long id);
 
 }
