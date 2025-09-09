@@ -12,6 +12,7 @@ import jakarta.persistence.MapsId;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
+
 @Entity
 @Table(name = "tb_payment")
 public class Payment {
