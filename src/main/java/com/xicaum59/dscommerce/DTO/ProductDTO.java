@@ -2,13 +2,29 @@ package com.xicaum59.dscommerce.DTO;
 
 import com.xicaum59.dscommerce.entities.Product;
 
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.Size;
+
 public class ProductDTO {
 	
 	private Long id;
-	private String name;	
+	
+	@Size(min = 3, max = 80, message = "Nome precisa ter minimo de 3 e maximo de 80 caracteres")
+	@NotBlank(message = "Campo Requerido")
+	private String name;
+	
+	@Size(min = 10, message = "descriçao precisa ter no minimo 10 caracteres")
+	@NotBlank(message = "Campo Requerido")
 	private String description;
+	
+	@Positive(message = "Preco deve ser positivo")
 	private Double price;
 	private String imgUrl;
+	
+	public ProductDTO() {
+		
+	}
 	
 	
 	
